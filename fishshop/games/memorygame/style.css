@@ -1,0 +1,67 @@
+/* Basic */
+
+  *,*:before,*:after{-moz-box-sizing:content-box;-webkit-box-sizing:content-box;-o-box-sizing:content-box;-ms-box-sizing:content-box;box-sizing:content-box}
+
+body {
+    font-size: 13.5pt;
+    font-family: sans-serif;
+    background-color: #e3e9dc;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: #878e83;
+    letter-spacing: -1px;
+  }
+ 
+table,td,th{
+  border:2px solid black;
+}
+
+table {
+    border-spacing: 1rem;
+  width: 60%;
+  }
+  
+th{
+  height:80px;
+}
+
+table,td,thc{
+  border:none;
+}
+
+thc{
+  height:20px;
+}
+
+h1{
+    font-size: 22.5pt;
+    font-family: sans-serif;
+}
+
+button {
+  background-image: url(assets/reset_btn.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  /* put the height and width of your image here */
+  height: 79px;
+  width: 79px;
+  border: none;
+}
+
+button span {
+  display: none;
+}
+
+#copyright {
+    text-align: right;
+    color: #A6A88F;
+    border-top: solid 1px #ced0b7;
+    padding: 3em 0 0 0;
+    margin: 1% 0 0 0;
+  }
+
+#copyright a {
+  color: #A6A88F;
+}
+
+  
+  
