@@ -1,0 +1,18 @@
+.col1, .col2, .col3, .cols {
+	float:left;
+}
+.col1 {
+	width:276px;
+}
+.col2 {
+	width:585px;
+}
+
+.col3 {
+	width:894px;
+}
+
+#page2 .cols {
+	width:525px;
+	padding-bottom:2px;
+}

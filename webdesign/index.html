@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple Web Solutions</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  <meta name="description" content="webdesign, webdevelopment, web, design, development,solutions, network,malta, freelance" />
+<meta name="keywords" content="danielattard.com, webdesign, webdevelopment, web, design, development, solutions, network, malta,freelance" />
+  <link rel="icon" type="image/gif" href="./images/favicon.gif" >  
+  <script type="text/javascript" src="js/jquery-1.4.2.js" ></script>
+  <script type="text/javascript" src="js/cufon-yui.js"></script>
+  <script type="text/javascript" src="js/cufon-replace.js"></script>
+  <script type="text/javascript" src="js/Copse_400.font.js"></script>
+  <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+  <script type="text/javascript" src="js/imagepreloader.js"></script>
+  <script type="text/javascript" src="js/showText.js"></script>
+  <script type="text/javascript">
+    preloadImages(['images/menu1_active.gif', 'images/menu2_active.gif', 'images/menu3_active.gif', 'images/menu4_active.gif', 'images/marker_right_active.jpg', 'images/marker_left_active.jpg', 'images/menu5_active.gif']);
+  </script>
+  
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="js/ie6_script_other.js"></script>
+  <script type="text/javascript" src="js/html5.js"></script>
+  <![endif]-->
+  <script type='text/javascript'>
+  $(document).ready(function(){
+  
+      $('#advantagesMenu a').click(function(){
+        
+        $('.content').hide();
+        //alert($(this).html());
+        handleNewSelection.apply($("#advantagesMenu"));
+    // $('#menu a').ready(getProducts);
+       //alert($('#menu a').html());
+        //$("#menu a").ready(getProducts($(this).html()));
+             
+    $('#'+this.rel+'').show(); 
+        //$('#'+this.rel+'').click(getProducts); 
+        //$('#menu a').ready(getProducts('c'));     
+    //alert($('#'+this.rel+'').html());  
+    
+      return false;
+      });
+      $('.content input.close').click(function(){
+        $(this).parent().hide();
+      });
+    });       
+         
+    hideAllDivs = function () {
+    $("#startingup").hide();
+    $("#financegrants").hide();
+    
+    };
+
+    handleNewSelection = function () {
+      hideAllDivs();      
+    };
+
+    $(document).ready(function() {        
+      handleNewSelection.apply($("#advantagesMenu"));      
+    });    
+</script>
+</head>
+  
+<body id="page1">
+<!-- START PAGE SOURCE -->
+<div class="body1">
+  <div class="body2">
+    <div class="main">
+      <header>
+        <div class="wrapper">
+          <h1><a href="index.html" id="logo">danielattard.com</a></h1>
+          <div class="right">
+            <nav>
+              <ul id="top_nav">
+                <li><a href="#">User Area</a></li>
+                <li><a href="#">Sitemap</a></li>
+              </ul>
+              <form id="search" method="post" action="#">
+                <div>
+                  <input type="submit" class="submit" value="">
+                  <input type="text" class="input">
+                </div>
+              </form>
+            </nav>
+          </div>
+        </div>
+        <nav id="menu">
+          <ul>
+            <li class="nav1" id="active"><a href="index.html">Home</a></li>
+            <li class="nav2"><a href="news.html">News</a></li>
+            <li class="nav3"><a href="services.html">Services</a></li>
+            <li class="nav4"><a href="portfolio.html">Portfolio</a></li>
+            <li class="nav5"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </div>
+</div>
+<div class="body3">
+  <div class="body4">
+    <div class="main">
+      <div class="slogan">
+        <div id="slider"> <img src="images/text1.jpg" alt=""> <img src="images/text2.jpg" alt=""> <img src="images/text3.jpg" alt=""> </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="body5">
+  <div class="body6">
+    <div class="main">
+      <div class="wrapper">
+        <figure class="left"><img src="images/letter0.png" alt=""></figure>
+        <h2>Welcome to <span>danielattard.com</span>!</h2>
+        danielattard.com provides Simple Web Solutions for everyone needs.
+        </div>
+    </div>
+  </div>
+</div>
+<div class="body7">
+  <div class="main">
+    <section id="content">
+      <div class="wrapper">
+        <article class="col1">
+          <div class="box1">
+            <div class="box1_bot">
+              <div class="box1_top">
+                <div class="pad">
+                  <div class="pad1">
+                    <h2 class="center">Meet</h2>
+                    <p>The first step involves a meeting with the aim to know exactly what the client is looking for.</p>
+                    <!--<div class="wrapper center"> <a href="#" class="button"><span><span>More</span></span></a> </div>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="col1 pad_left1">
+          <div class="box1">
+            <div class="box1_bot">
+              <div class="box1_top">
+                <div class="pad">
+                  <div class="pad1">
+                    <h2 class="center">Plan</h2>
+                    <p>After some planning and how the website will look like, keeping in mind the goals of the client.</p>
+                    <!--<div class="wrapper center"> <a href="#" class="button"><span><span>More</span></span></a> </div>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="col1 pad_left1">
+          <div class="box1">
+            <div class="box1_bot">
+              <div class="box1_top">
+                <div class="pad">
+                  <div class="pad1">
+                    <h2 class="center">Agree</h2>
+                    <p>A price agreement is stipulated, deliverables and date of delivery. At this stage a deposit is paid.</p>
+                    <!--<div class="wrapper center"> <a href="#" class="button"><span><span>More</span></span></a> </div>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>    
+      </div>      
+    <div class="wrapper">
+        <article class="col1">
+          <div class="box1">
+            <div class="box1_bot">
+              <div class="box1_top">
+                <div class="pad">
+                  <div class="pad1">
+                    <h2 class="center">Code</h2>
+                    <p>Using the information gathered from the previous stage, now its time to start creating the website.</p>
+                    <!--<div class="wrapper center"> <a href="#" class="button"><span><span>More</span></span></a> </div>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="col1 pad_left1">
+          <div class="box1">
+            <div class="box1_bot">
+              <div class="box1_top">
+                <div class="pad">
+                  <div class="pad1">
+                    <h2 class="center">Testing</h2>
+                    <p>Quality is an important aspect, that is why our websites are tested before delivery.</p>
+                    <!--<div class="wrapper center"> <a href="#" class="button"><span><span>More</span></span></a> </div>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+    <article class="col1 pad_left1">
+          <div class="box1">
+            <div class="box1_bot">
+              <div class="box1_top">
+                <div class="pad">
+                  <div class="pad1">
+                    <h2 class="center">Deliver</h2>
+                    <p>Once the website is ready and the client is satisfied, the client will settle the remaining balance.</p>
+                    <!--<div class="wrapper center"> <a href="#" class="button"><span><span>More</span></span></a> </div>-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      
+      <div class="wrapper">
+        <article class="col2">
+          <div class="pad1">
+            <h2>Features Overview</h2>
+            <p class="pad_bot1">We can help you to bring your business on-line quickly and easily at prices lower than you'd expect. Discover how our process works by following each process step.</p>
+            <!--<p class="pad_bot2"></p>-->  
+      
+     
+            <div id="startingup">
+              <h4>Starting Up</h4>
+              <p class="pad_bot1">Would you like to enable your business to be reached by online customers? Web presence is what every business nowadays need.</p>
+              <p class="pad_bot2">Get others to know what type of business you are running and what you have to offer by a simple click!</p>             
+            </div>
+            
+            <div id="financegrants">
+              <h4>Finance and grants</h4>          
+              <p class="pad_bot1">Why don't you take the opportunity to invest in a website for your business?</p>
+              <p class="pad_bot2">Do like many others are doing, contact us, and we can help you invest for your future.</p>
+            </div>     
+       
+          </div>
+        </article>    
+      
+           
+        <article class="col1 pad_left1">
+          
+  
+  
+  <h2>Advantages</h2>
+          <ul class="list2" id="advantagesMenu">
+            <li><a href="startingup" rel="startingup"><img src="images/icon1.jpg" alt="">Starting up</a></li>            
+			<li><a href="financegrants" rel="financegrants"><img src="images/icon2.jpg" alt="">Finance and grants</a></li>
+          </ul>        
+          
+        </article>   
+
+    </section>
+  </div>
+  </div>
+
+<div class="body8">
+  <div class="body9">
+    <div class="main">
+      <footer>
+        <div class="col_1">
+          <h3>Social Network</h3>
+          <ul class="list3">            
+            <li><a href="#">Facebook</a></li>  
+			<li><a href="http://mt.linkedin.com/pub/daniel-attard/74/b8b/584">LinkedIn</a></li>          		
+          </ul>
+        </div>
+        <div class="col_2 pad_left1">
+          <h3>Other Solutions</h3>
+          <div class="wrapper">
+            <ul class="list3 col_2">
+              <li><a href="index.html">Web Design &amp; Development </a></li>
+			  <li><a href="portfolio-logos.html">Logo Designs</a></li>			  
+              <li><a href="portfolio-networksolutions.html">Network &amp; Telephone</a></li>
+              <li><a href="#">Computer Repairs</a></li>
+            </ul>
+            <ul class="list3 col_1 pad_left1">
+              <!--
+        <li><a href="#">Regulatory Support</a></li>
+              <li><a href="#">Risk Assessment</a></li>
+              <li><a href="#">Change Management</a></li>
+              <li><a href="#">Info Technology</a></li>
+        -->
+            </ul>
+          </div>
+        </div>
+        <div class="col_3"> <a href="index.html" id="footer_logo">danielattard.com</a>
+          <p class="center">Copyright &copy; 2013 <a href="#">danielattard.com</a>  All Rights Reserved</p>          
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+<script type="text/javascript"> Cufon.now(); </script>
+<script type="text/javascript">
+$(window).load(function() {
+  advantagesVisibilityHide();
+  $('#slider').nivoSlider({
+        effect:'sliceDown', //Specify sets like: 'fold,fade,sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft'    
+        slices:20,
+        animSpeed:300,
+        pauseTime:9999999999,
+        startSlide:0, //Set starting Slide (0 index)
+        directionNav:true, //Next & Prev
+        directionNavHide:false, //Only show on hover
+        controlNav:false, //1,2,3...
+        controlNavThumbs:false, //Use thumbnails for Control Nav
+        controlNavThumbsFromRel:false, //Use image rel for thumbs
+        controlNavThumbsSearch: '.jpg', //Replace this with...
+        controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+        keyboardNav:true, //Use left & right arrows
+        pauseOnHover:true, //Stop animation while hovering
+        manualAdvance:false, //Force manual transitions
+        captionOpacity:1, //Universal caption opacity
+        beforeChange: function(){},
+        afterChange: function(){},
+        slideshowEnd: function(){} //Triggers after all slides have been shown
+    });
+    });
+</script>
+<!-- END PAGE SOURCE -->
+
+</html>

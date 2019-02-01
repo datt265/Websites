@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Simple Web Solutions</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<link rel="icon" type="image/gif" href="./images/favicon.gif" >  
+<script type="text/javascript" src="js/jquery-1.4.2.js" ></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/cufon-replace.js"></script>
+<script type="text/javascript" src="js/Copse_400.font.js"></script>
+<script type="text/javascript" src="js/imagepreloader.js"></script>
+<!-- Add jQuery library -->
+	<script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	
+	<script type="text/javascript">
+	preloadImages(['images/menu1_active.gif', 'images/menu2_active.gif', 'images/menu3_active.gif', 'images/menu4_active.gif', 'images/menu5_active.gif']);
+	</script>
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay closing speed
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedOut : 0
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				openEffect : 'none',
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background' : 'rgba(238,238,238,0.85)'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+
+
+
+		});
+	</script>
+
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="js/ie6_script_other.js"></script>
+<script type="text/javascript" src="js/html5.js"></script>
+<![endif]-->
+</head>
+<body id="page4">
+<!-- START PAGE SOURCE -->
+<div class="body1">
+  <div class="body2">
+    <div class="main">
+      <header>
+        <div class="wrapper">
+          <h1><a href="index.html" id="logo">danielattard.com</a></h1>
+          <div class="right">
+            <nav>
+              <ul id="top_nav">
+                <li><a href="#">User Area</a></li>
+                <li><a href="#">Sitemap</a></li>
+              </ul>
+              <form id="search" method="post" action="#">
+                <div>
+                  <input type="submit" class="submit" value="">
+                  <input type="text" class="input">
+                </div>
+              </form>
+            </nav>
+          </div>
+        </div>
+        <nav id="menu">
+          <ul>
+            <li class="nav1"><a href="index.html">Home</a></li>
+            <li class="nav2"><a href="news.html">News</a></li>
+            <li class="nav3"><a href="services.html">Services</a></li>
+            <li class="nav4" id="active"><a href="portfolio.html">Portfolio</a></li>
+            <li class="nav5"><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </div>
+</div>
+<div class="body5">
+  <div class="body6">
+    <div class="main">
+      <div class="wrapper">
+        <figure class="left"><img src="images/letter4.png" alt=""></figure>
+        <h2>Browse The Ultimate<span>Portfolio</span>!</h2>
+        Our aim is to meet our client expectations </div>
+    </div>
+  </div>
+</div>
+<div class="body7">
+  <div class="main">
+    <section id="content">
+      <div class="wrapper">
+        <article class="col2">
+          <div class="pad1">
+            <h2>Logo Designs</h2>
+            <p class="pad_bot2">Some of our logos</p>
+            </div>
+			<br/>	
+	<table>
+         <tr>
+            <td>
+				<a class="fancybox-buttons" data-fancybox-group="button" href="images/services/logos/big-logo_01.png"><img src="images/services/logos/small-logo_01.png" alt="" /></a>
+            </td>
+			<td>&nbsp;&nbsp;</td>
+			<td>
+				<a class="fancybox-buttons" data-fancybox-group="button" href="images/services/logos/big-logo_02.png"><img src="images/services/logos/small-logo_02.png" alt="" /></a>
+			</td>
+			<td>&nbsp;&nbsp;</td>
+			<td>
+				<a class="fancybox-buttons" data-fancybox-group="button" href="images/services/logos/big-logo_03.png"><img src="images/services/logos/small-logo_03.png" alt="" /></a>
+			</td>
+		</tr>
+		<tr>
+              <td><br></td>
+        </tr> 	
+		<tr>
+            <td>
+				<a class="fancybox-buttons" data-fancybox-group="button" href="images/services/logos/big-logo_04.png"><img src="images/services/logos/small-logo_04.png" alt="" /></a>
+            </td>
+			<td>&nbsp;&nbsp;</td>
+			<td>
+				<a class="fancybox-buttons" data-fancybox-group="button" href="images/services/logos/big-logo_06.png"><img src="images/services/logos/small-logo_06.png" alt="" /></a>
+            </td>
+			<td>&nbsp;&nbsp;</td>
+		</tr>
+		
+	</table>     
+  </article>   
+		
+  
+        <article class="col1 pad_left1">
+          <h2>Advantages</h2>
+          <ul class="list2" id="advantagesMenu">
+           <!--<li><a href="startingup" rel="startingup"><img src="images/icon1.jpg" alt="">Starting up</a></li>-->
+            <li><a href="index.html#startingup" ><img src="images/icon1.jpg" alt="">Starting up</a></li>
+            <li><a href="index.html#financegrants" rel="financegrants"><img src="images/icon2.jpg" alt="">Finance and grants</a></li>
+      <!--<li><a href="financegrants" rel="financegrants"><img src="images/icon2.jpg" alt="">Finance and grants</a></li>-->
+      </ul>    
+      <!--
+          <div class="box1">
+            <div class="box1_bot">
+              <div class="box1_top">
+                <div class="pad">
+        
+                  <h2>Newsletter</h2>
+                  Sign up for weekly newsletter:
+                  <form id="sign_up" method="post" action="#">
+                    <div>
+                      <input type="text" class="input">
+                      <a href="#">Sign up</a> </div>
+                  </form>
+                </div>        
+              </div>
+            </div>
+          </div>
+      -->
+        </article>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="body8">
+  <div class="body9">
+    <div class="main">
+      <footer>
+        <div class="col_1">
+          <h3>Social Network</h3>
+          <ul class="list3">            
+            <li><a href="#">Facebook</a></li>  
+			<li><a href="http://mt.linkedin.com/pub/daniel-attard/74/b8b/584">LinkedIn</a></li>  	
+          </ul>
+        </div>
+        <div class="col_2 pad_left1">
+          <h3>Other Solutions</h3>
+          <div class="wrapper">
+            <ul class="list3 col_2">
+              <li><a href="index.html">Web Design &amp; Development </a></li>
+			  <li><a href="portfolio-logos.html">Logo Designs</a></li>	
+              <li><a href="portfolio-networksolutions.html">Network &amp; Telephone</a></li>
+              <li><a href="#">Computer Repairs</a></li>
+            </ul>
+            <ul class="list3 col_1 pad_left1">
+              <!--
+        <li><a href="#">Regulatory Support</a></li>
+              <li><a href="#">Risk Assessment</a></li>
+              <li><a href="#">Change Management</a></li>
+              <li><a href="#">Info Technology</a></li>
+        -->
+            </ul>
+          </div>
+        </div>
+        <div class="col_3"> <a href="index.html" id="footer_logo">danielattard.com</a>
+          <p class="center">Copyright &copy; 2013 <a href="#">danielattard.com</a>  All Rights Reserved</p>          
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+<script type="text/javascript"> Cufon.now(); </script>
+<!-- END PAGE SOURCE -->
+
+</html>
